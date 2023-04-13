@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Reviews</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+      h1 {
+        margin: 0;
+      }
+      form {
+        margin: 20px;
+      }
+      input[type=text] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+      }
+      button[type=submit] {
+        background-color: #333;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button[type=submit]:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Product Reviews</h1>
+    </header>
+    <form action="{{ url_for('reviews') }}" method="post">
+      <input type="text" name="url" placeholder="Enter product URL">
+      <button type="submit">Get reviews</button>
+    </form>
+  </body>
+</html>

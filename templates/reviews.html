@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Product Reviews</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+      }
+      h1 {
+        margin: 0;
+      }
+      ul {
+        list-style-type: none;
+        margin: 20px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      p {
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Product Reviews</h1>
+    </header>
+    {% if reviews %}
+      <ul>
+        {% for review in reviews %}
+          <li>{{ review.text }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>No reviews found.</p>
+    {% endif %}
+  </body>
+</html>
